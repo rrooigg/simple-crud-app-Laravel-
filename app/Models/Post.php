@@ -11,4 +11,9 @@ class Post extends Model
         'body',
         'user_id',
     ];
+
+    //relationship to get the user name of a post
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
